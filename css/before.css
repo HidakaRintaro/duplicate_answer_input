@@ -1,0 +1,144 @@
+@charset "UTF-8";
+
+:root {
+  --ruler: 18px;
+  --color-red: #ae1100;
+  --main-bg: #ebecf0;
+  --font-color: #555555;
+  --color-shadow: #babecc;
+  --color-white: #ffffff;
+  --main-space: 32px;
+}
+
+body, html {
+  background-color: var(--main-bg);
+}
+
+body, p, input, select, button {
+  font-family: 'UD デジタル 教科書体 N-R', sans-serif;
+  letter-spacing: -0.2px;
+  font-size: var(--ruler);
+}
+
+div, p, h1{
+  color: var(--font-color);
+  text-shadow: 1px 1px 1px var(--color-white);
+}
+
+.red {
+  color: var(--color-red);
+}
+
+main {
+  padding: var(--main-space) 0;
+}
+
+h1 {
+  font-size: calc(var(--ruler) * 2.5);
+  text-align: center;
+  margin-bottom: calc(var(--main-space) * 1.5);
+}
+
+main p {
+  text-align: center;
+  margin-bottom: calc(var(--main-space) * 0.8);
+}
+
+main .heading {
+  font-size: calc(var(--ruler) * 1.6);
+  margin-bottom: calc(var(--main-space) * 1.6);
+}
+
+ul {
+  width: 40%;
+  margin: 0 auto;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--main-space);
+  padding: calc(var(--ruler) * .8) calc(var(--ruler) * 1.6);
+  box-shadow: -5px -5px 10px var(--color-white),  2px 2px 5px var(--color-shadow);
+  border-radius: calc(var(--ruler) * 1.2);
+}
+
+li p {
+  margin-bottom: 0;
+}
+
+input[type=radio] {
+  display: none;
+}
+
+label {
+  display: block;
+  width: calc(var(--ruler) * 3);
+  height: calc(var(--ruler) * 3);
+  text-align: center;
+  line-height: calc(var(--ruler) * 3);
+  border-radius: calc(var(--ruler) * 1);
+  box-shadow: inset 1px 1px 2px var(--color-shadow), inset -1px -1px 2px var(--color-white);
+}
+
+label:active {
+  box-shadow: inset 2px 2px 5px var(--color-shadow), inset -5px -5px 10px var(--color-white);
+}
+
+input[type=radio]:checked ~ label {
+  color: var(--color-red);
+  font-size: calc(var(--ruler) * 1.1);
+  font-weight: bold;
+  box-shadow: -5px -5px 10px var(--color-white), 2px 2px 5px var(--color-shadow);
+}
+
+button {
+  border: none;
+  outline: none;
+  font-size: var(--ruler);
+  border-radius: calc(var(--ruler) * 20);
+  padding: var(--ruler);
+  background-color: var(--main-bg);
+  text-shadow: 1px 1px 0 var(--color-white);
+}
+
+button {
+  display: block;
+  width: 40%;
+  margin: 0 auto;
+  font-weight: bold;
+  box-shadow: -5px -5px 20px var(--color-white),  5px 5px 20px var(--color-shadow);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button:hover {
+  box-shadow: -2px -2px 5px var(--color-white), 2px 2px 5px var(--color-shadow);
+}
+
+button:active {
+  box-shadow: inset 1px 1px 2px var(--color-shadow), inset -1px -1px 2px var(--color-white);
+}
+
+hr {
+  height: 1px;
+  margin-bottom: var(--main-space);
+  background: var(--color-shadow);
+  background: -webkit-linear-gradient(left, var(--main-bg), var(--color-shadow), var(--main-bg));
+  box-shadow: 1px 1px 2px var(--color-white);
+  box-shadow: 1px 1px 2px -webkit-linear-gradient(left, var(--main-bg), var(--color-white), var(--main-bg));
+}
+
+footer {
+  margin-bottom: var(--main-space);
+}
+
+footer p {
+  text-align: center;
+}
+
+footer small{
+  font-size: calc(var(--ruler) * .9);
+}
